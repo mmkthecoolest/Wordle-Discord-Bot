@@ -46,4 +46,4 @@ async def wordle_guess(channel_id):
 
         time.sleep(3600*24)
 
-client.run("OTM5MjA2NDY0MjY5MDY2Mjkw.Yf1eLg.-NPevOzCpBQfTKELXsZxEcAVNeM")
+client.run("TOKEN")
