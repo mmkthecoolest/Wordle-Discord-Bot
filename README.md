@@ -8,5 +8,7 @@ This repo contains the code for the bot to run. It has been written using `nextc
 
 ## How to Set Up
 
+⚠ THE CHANNEL ID'S ARE STORED IN A PYTHON DICTIONARY RATHER THAN A DATABASE, WHICH MEANS THAT ANY MAINTENANCE CHANGES WILL REMOVE THOSE STORED ID'S AND YOU WILL NEED TO USE THE SETUP COMMAND AGAIN. USE AT YOUR OWN RISK. ⚠
+
 1. Copy and paste [this link](https://discord.com/api/oauth2/authorize?client_id=939247798195478588&permissions=292057852944&scope=bot) to a browser to add the bot into your server (you must have server managing permissions). All the permissions needed by this bot are necessary (except the message managing permission if you don't want the bot to delete messages).
 2. Once the bot is added, type `!wordle_setup` in the channel you desire. BE CAREFUL NOT TO ADD IT IN THE WRONG CHANNEL, OTHERWISE YOU WILL NEED TO KICK THE BOT OUT SINCE I DO NOT KNOW HOW TO MAKE THE BOT LEAVE THROUGH CODE YET.
