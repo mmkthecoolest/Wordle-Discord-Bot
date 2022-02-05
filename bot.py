@@ -3,7 +3,7 @@ import requests
 import nextcord
 import os
 from datetime import date, timedelta
-from nextcord.ext import tasks
+from nextcord.ext import tasks, commands
 
 from dotenv import load_dotenv
 
@@ -20,7 +20,7 @@ class MyClient(nextcord.Client):
     bot = commands.Bot(command_prefix="!", intents= nextcord.Intents.default())
     
     @bot.command(name="wordle_setup")
-    async def wordle_setup(ctx):
+    async def wordle_setup(self, ctx):
         await ctx.message.delete()
         await ctx.send("Setting up...")
         self.channel_id.append(ctx.message.channel.id)
