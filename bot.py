@@ -21,9 +21,9 @@ class MyClient(nextcord.Client):
     
     @bot.command(name="wordle_setup")
     async def wordle_setup(ctx):
-        await message.delete()
+        await ctx.message.delete()
         await ctx.send("Setting up...")
-        self.channel_id.append(message.channel.id)
+        self.channel_id.append(ctx.message.channel.id)
         self.channel_id_exists = True
 
     @tasks.loop(seconds=86400)
