@@ -5,8 +5,9 @@ import os
 from datetime import date, timedelta
 from discord.ext import tasks
 
+from dotenv import load_dotenv
 
-print("test!")
+load_dotenv()
 
 
 class MyClient(discord.Client):
@@ -45,4 +46,5 @@ class MyClient(discord.Client):
 
 client = MyClient()
 client.wordle_guess.start()
-client.run("TOKEN")
+TOKEN = os.getenv("TOKEN")
+client.run(TOKEN)
