@@ -15,19 +15,18 @@ class MyClient(nextcord.Client):
     channel_id_exists = False
 
     async def on_ready(self):
-        print('We have logged in as {0.user}'.format(self))
+        print(f'We have logged in as {self}')
 
-    async def on_message(self, message):
-        if message.author == self.user:
-            return
+    bot = commands.Bot(command_prefix="!", intents= nextcord.Intents.default())
+    
+    @bot.command(name="wordle_setup")
+    async def wordle_setup(ctx):
+        await message.delete()
+        await ctx.send("Setting up...")
+        self.channel_id.append(message.channel.id)
+        self.channel_id_exists = True
 
-        if message.content.startswith('!wordle_setup'):
-            await message.delete()
-            await message.channel.send("Setting up...")
-            self.channel_id.append(message.channel.id)
-            self.channel_id_exists = True
-
-    @tasks.loop(seconds=3600*24)
+    @tasks.loop(seconds=86400)
     async def wordle_guess(self):
         if self.channel_id_exists:
 
@@ -42,7 +41,6 @@ class MyClient(nextcord.Client):
                 word_guess = json.loads(requests.get(
                     "https://najemi.cz/wordle_answers/api/?day={0}&month={1}&year={2}".format(day, month, year)).text)["word"]
                 await message_channel.send("Wordle guess for " + yesterday.isoformat() + " : " + word_guess + '\nhttps://www.merriam-webster.com/dictionary/' + word_guess)
-
 
 client = MyClient()
 client.wordle_guess.start()
