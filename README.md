@@ -4,7 +4,7 @@ Wordle Solutions Discord Bot is a bot that posts yesterday's Wordle solution. Wo
 
 My plan is to host this bot and start it late night at EST time, to guarantee that there is no cheating possible (the bot only posts the solution per 24 hours). The bot will look for yesterday's Wordle solution during late night EST time.
 
-This repo contains the code for the bot to run. It has been written using `discord.py`
+This repo contains the code for the bot to run. It has been written using `discord.py` and uses an API provided by [Martin Najemi](https://najemi.cz/).
 
 ## How to Set Up
 ⚠ PLEASE DO NOT ADD THE BOT YET AS I STILL NEED TO FIGURE OUT HOSTING ⚠
