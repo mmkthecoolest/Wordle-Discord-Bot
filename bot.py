@@ -1,13 +1,10 @@
-import asyncio
-import imp
 import json
 import requests
 import discord
 import os
-import time
 from datetime import date, timedelta
 from discord.ext import tasks
-import threading
+
 
 print("test!")
 
