@@ -1,16 +1,16 @@
 import json
 import requests
-import discord
+import nextcord
 import os
 from datetime import date, timedelta
-from discord.ext import tasks
+from nextcord.ext import tasks
 
 from dotenv import load_dotenv
 
 load_dotenv()
 
 
-class MyClient(discord.Client):
+class MyClient(nextcord.Client):
     channel_id = []
     channel_id_exists = False
 
